@@ -1,0 +1,38 @@
+*
+{
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial";
+}
+
+.label
+{
+    -fx-text-fill: black;
+}
+
+.orange
+{
+    -fx-background-color: #ec7211;
+}
+.pane-background
+{
+    -fx-background-color: #e1e1e1;
+}
+    .pane-background-right
+    {
+        -fx-background-color: #e1e1e1;
+        -fx-border-width: 0 0 0 1;
+        -fx-border-color: #889699;
+    }
+.pane-foreground
+{
+    -fx-background-color: white;
+}
+.label-header
+{
+    -fx-text-fill: #545b64;
+}
+.btn-copy
+{
+    -fx-pref-width: 25px;
+    -fx-pref-height: 20px;
+}
