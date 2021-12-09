@@ -206,38 +206,54 @@ public class MainController implements Initializable
     //Copy Button Functions
     public void copyPubIp()
     {
-        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
-        String copyText = lblPublicIp4v.getText();
-        copyHelper(copyText);
-        lblStatus.setText("Copied " + selectedInstance.getName() + " PublicIP4v Address to clipboard.");
+        copyCommand("pubip");
     }
     public void copyPubIpDNS()
     {
-        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
-        String copyText = lblPublicIpDNS.getText();
-        copyHelper(copyText);
-        lblStatus.setText("Copied " + selectedInstance.getName() + " PublicIP4v DNS to clipboard.");
+        copyCommand("pubipdns");
     }
     public void copySSH()
     {
-        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
-        String copyText = lblSSH.getText();
-        copyHelper(copyText);
-        lblStatus.setText("Copied " + selectedInstance.getName() + " SSH command to cliboard.");
+        copyCommand("ssh");
     }
     public void copySCP()
     {
-        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
-        String copyText = lblSCP.getText();
-        copyHelper(copyText);
-        lblStatus.setText("Copied " + selectedInstance.getName() + " SCP command to cliboard.");
+        copyCommand("scp");
     }
 
-    public void copyCommand()
+    //Main function to copy from individual labels and set response text in status line.
+    public void copyCommand(String command)
     {
-
+        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
+        String copyText = "";
+        String labelStatus = "";
+        switch (command.toLowerCase())
+        {
+            case "pubip":
+                copyText = lblPublicIp4v.getText();
+                copyHelper(copyText);
+                labelStatus = " PublicIP4 to clipboard.";
+                break;
+            case "pubipdns":
+                copyText = lblPublicIpDNS.getText();
+                copyHelper(copyText);
+                labelStatus = " PublicIP4v DNS to clipboard.";
+                break;
+            case "ssh":
+                copyText = lblSSH.getText();
+                copyHelper(copyText);
+                labelStatus = " SSH command to cliboard.";
+                break;
+            case "scp":
+                copyText = lblSCP.getText();
+                copyHelper(copyText);
+                labelStatus = " SCP command to cliboard.";
+                break;
+        }
+        lblStatus.setText("Copied " + selectedInstance.getName() + labelStatus);
     }
 
+    //Copy to clipboard
     public void copyHelper(String copyText)
     {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -256,6 +272,7 @@ public class MainController implements Initializable
         return arrList;
     }
 
+    //Load persistent data
     private void initDefaultValues()
     {
         Preferences preferences = Preferences.getPreferences();
