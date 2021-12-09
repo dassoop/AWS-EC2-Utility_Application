@@ -83,6 +83,10 @@ public class MainController implements Initializable
                 lblFile.clear();
                 lblSCP.clear();
                 lblStatus.setText("");
+
+                String copyText = lblSSH.getText();
+                copyHelper(copyText);
+                lblStatus.setText("Copied " + selectedInstance1.getName() + " SSH command to cliboard.");
             }
         });
     }
@@ -202,27 +206,36 @@ public class MainController implements Initializable
     //Copy Button Functions
     public void copyPubIp()
     {
+        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
         String copyText = lblPublicIp4v.getText();
         copyHelper(copyText);
-        lblStatus.setText("Copied PublicIP4v Address to clipboard.");
+        lblStatus.setText("Copied " + selectedInstance.getName() + " PublicIP4v Address to clipboard.");
     }
     public void copyPubIpDNS()
     {
+        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
         String copyText = lblPublicIpDNS.getText();
         copyHelper(copyText);
-        lblStatus.setText("Copied PublicIP4v DNS to clipboard.");
+        lblStatus.setText("Copied " + selectedInstance.getName() + " PublicIP4v DNS to clipboard.");
     }
     public void copySSH()
     {
+        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
         String copyText = lblSSH.getText();
         copyHelper(copyText);
-        lblStatus.setText("Copied SSH command to cliboard.");
+        lblStatus.setText("Copied " + selectedInstance.getName() + " SSH command to cliboard.");
     }
     public void copySCP()
     {
+        Instance selectedInstance = listView.getSelectionModel().getSelectedItem();
         String copyText = lblSCP.getText();
         copyHelper(copyText);
-        lblStatus.setText("Copied SCP command to cliboard.");
+        lblStatus.setText("Copied " + selectedInstance.getName() + " SCP command to cliboard.");
+    }
+
+    public void copyCommand()
+    {
+
     }
 
     public void copyHelper(String copyText)

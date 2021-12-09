@@ -1,1 +1,1 @@
-{"instanceList":[]}
+{"instanceList":[{"name":"Instance","publicIP4v":"0000","publicIP4vDNS":"00000","keypair":"/Users/lancemac/Documents/Development/AWSKeyPairs_GitHubTokens/us-west-1-keypair.pem"}]}
