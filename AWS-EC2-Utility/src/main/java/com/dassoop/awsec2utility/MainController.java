@@ -1,6 +1,7 @@
 package com.dassoop.awsec2utility;
 
 import com.dassoop.awsec2utility.models.Instance;
+import com.dassoop.awsec2utility.services.CopyService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +19,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -30,33 +32,39 @@ public class MainController implements Initializable
     ListView<Instance> listView = new ListView<>();
     //Instance info section
     @FXML
-    Label lblName = new Label();
+    public Label lblName = new Label();
     @FXML
-    Label lblPublicIp4v = new Label();
+    public Label lblPublicIp4v = new Label();
     @FXML
-    javafx.scene.control.TextField lblPublicIpDNS = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField lblPublicIpDNS = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField lblKeypair = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField lblKeypair = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField lblSSH = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField lblSSH = new javafx.scene.control.TextField();
     //SCP section
     @FXML
-    javafx.scene.control.TextField lblFile = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField lblFile = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField lblSCP = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField lblSCP = new javafx.scene.control.TextField();
     //Add instance section
     @FXML
-    javafx.scene.control.TextField formName = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField formName = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField formIP = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField formIP = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField formDNS = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField formDNS = new javafx.scene.control.TextField();
     @FXML
-    javafx.scene.control.TextField formKeypair = new javafx.scene.control.TextField();
+    public javafx.scene.control.TextField formKeypair = new javafx.scene.control.TextField();
     @FXML
-    Label lblStatus = new Label();
+    public Label lblStatus = new Label();
 
     static ArrayList<Instance> instanceList = new ArrayList<>();
+
+    CopyService copyService;
+    public MainController() throws IOException
+    {
+        copyService = new CopyService();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
