@@ -10,10 +10,30 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" styleClass="main" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dassoop.awsec2utility.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="main" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dassoop.awsec2utility.MainController">
    <children>
-      <Pane prefHeight="21.0" prefWidth="600.0" styleClass="orange" stylesheets="@stylesheet.css" />
-      <Pane layoutY="21.0" prefHeight="493.0" prefWidth="302.0" styleClass="pane-background" stylesheets="@stylesheet.css">
+      <Pane layoutY="-1.0" prefHeight="62.0" prefWidth="600.0" styleClass="orange" stylesheets="@stylesheet.css">
+         <children>
+            <Pane fx:id="pane_awsLogo" prefHeight="62.0" prefWidth="97.0">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/aws.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_dockerLogo" layoutX="503.0" prefHeight="62.0" prefWidth="97.0">
+               <children>
+                  <ImageView fitHeight="72.0" fitWidth="88.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/docker.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane layoutY="61.0" prefHeight="493.0" prefWidth="302.0" styleClass="pane-background" stylesheets="@stylesheet.css">
          <children>
             <Pane prefHeight="288.0" prefWidth="302.0" styleClass="pane-foreground" stylesheets="@stylesheet.css">
                <children>
@@ -98,7 +118,7 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="302.0" layoutY="21.0" prefHeight="493.0" prefWidth="298.0" styleClass="pane-background-right" stylesheets="@stylesheet.css">
+      <Pane layoutX="302.0" layoutY="61.0" prefHeight="493.0" prefWidth="298.0" styleClass="pane-background-right" stylesheets="@stylesheet.css">
          <children>
             <ListView fx:id="listView" layoutX="1.0" prefHeight="247.0" prefWidth="297.0" />
             <Pane layoutX="1.0" layoutY="252.0" prefHeight="235.0" prefWidth="297.0" styleClass="pane-foreground" stylesheets="@stylesheet.css">
@@ -127,6 +147,6 @@
             </Pane>
          </children>
       </Pane>
-      <Label fx:id="lblStatus" layoutX="5.0" layoutY="522.0" prefHeight="17.0" prefWidth="572.0" />
+      <Label fx:id="lblStatus" layoutX="5.0" layoutY="562.0" prefHeight="17.0" prefWidth="572.0" />
    </children>
 </AnchorPane>

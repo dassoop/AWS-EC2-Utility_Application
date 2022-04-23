@@ -10,16 +10,19 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.swing.text.html.ImageView;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -57,6 +60,10 @@ public class MainController implements Initializable
     public javafx.scene.control.TextField formKeypair = new javafx.scene.control.TextField();
     @FXML
     public Label lblStatus = new Label();
+    @FXML
+    public Pane pane_awsLogo = new Pane();
+    @FXML
+    public Pane pane_dockerLogo = new Pane();
 
     static ArrayList<Instance> instanceList = new ArrayList<>();
 
@@ -97,6 +104,39 @@ public class MainController implements Initializable
                 lblStatus.setText("Copied " + selectedInstance1.getName() + " SSH command to cliboard.");
             }
         });
+
+        //Set on clicked event for AWS logo pane
+        pane_awsLogo.setOnMouseClicked(mouseEvent -> {
+            try
+            {
+                Desktop.getDesktop().browse(new URL("https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#Instances:").toURI());
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+            catch (URISyntaxException e)
+            {
+                e.printStackTrace();
+            }
+        });
+
+        //Set on clicked event for Docker command logo pane
+        pane_dockerLogo.setOnMouseClicked(mouseEvent -> {
+            String copyText = "sudo yum update -y\n"
+                            + "sudo yum install docker -y\n"
+                            + "sudo service docker start\n"
+                            + "sudo curl -L \"https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose\n"
+                            + "sudo chmod +x /usr/local/bin/docker-compose\n"
+                            + "sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose\n"
+                            + "docker-compose --version\n"
+                            + "sudo docker --version\n";
+
+            copyHelper(copyText);
+            String labelStatus = "Copied Docker start up commands to clipboard.";
+            lblStatus.setText(labelStatus);
+        });
+
     }
 
     public void setLabels(Instance selectedInstance)
