@@ -1,8 +1,8 @@
-com/dassoop/awsec2utility/Main.class
-com/dassoop/awsec2utility/models/Instance.class
-com/dassoop/awsec2utility/Preferences.class
-com/dassoop/awsec2utility/services/CopyService.class
+com\dassoop\awsec2utility\Preferences.class
+com\dassoop\awsec2utility\Runner.class
+com\dassoop\awsec2utility\InstanceCell.class
+com\dassoop\awsec2utility\models\Instance.class
+com\dassoop\awsec2utility\Main.class
 module-info.class
-com/dassoop/awsec2utility/MainController.class
-com/dassoop/awsec2utility/InstanceCell.class
-com/dassoop/awsec2utility/Runner.class
+com\dassoop\awsec2utility\services\CopyService.class
+com\dassoop\awsec2utility\MainController.class
