@@ -1,8 +1,8 @@
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\models\Instance.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\Preferences.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\Runner.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\services\CopyService.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\Main.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\InstanceCell.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\module-info.java
-C:\Users\ssumm\IdeaProjects\AWS-EC2-Utility_Application\AWS-EC2-Utility\src\main\java\com\dassoop\awsec2utility\MainController.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/Runner.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/services/CopyService.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/models/Instance.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/module-info.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/Preferences.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/InstanceCell.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/Main.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/MainController.java

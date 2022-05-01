@@ -1,7 +1,6 @@
 package com.dassoop.awsec2utility;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,11 +14,6 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 625); //add and extra 25 to account for the macOS top bar
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm());
-        Platform.setImplicitExit(true);
-        stage.setOnCloseRequest((ae) -> {
-            Platform.exit();
-            System.exit(0);
-        });
         stage.setTitle("AWS EC2 Utility");
         stage.setResizable(false);
         stage.setScene(scene);
