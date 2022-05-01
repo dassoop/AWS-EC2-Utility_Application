@@ -1,4 +1,5 @@
 /Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/Runner.java
+/Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/services/CopyService.java
 /Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/models/Instance.java
 /Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/module-info.java
 /Users/lancemac/Documents/Development/IdeaProjects/JavaFX/AWS-EC2-Utility_Application/AWS-EC2-Utility/src/main/java/com/dassoop/awsec2utility/Preferences.java
